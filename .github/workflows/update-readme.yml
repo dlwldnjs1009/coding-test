@@ -33,7 +33,7 @@ jobs:
         python update.py
     - name: Commit changes
       run: |
-        git config --global user.name 'LeeJiWon'
+        git config --global user.name 'dlwldnjs1009'
         git config --global user.email 'dlwldnjs1009@gmail.com'
         git add -A
         git commit -am "auto update README.md"

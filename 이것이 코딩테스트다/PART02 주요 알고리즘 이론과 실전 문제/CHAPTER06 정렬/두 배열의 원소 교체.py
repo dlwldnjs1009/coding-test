@@ -10,5 +10,6 @@ for i in range(k):
     else:
         break
 
+
 print(sum(array_a))
 

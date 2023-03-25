@@ -19,13 +19,15 @@ parent = [0] * (v + 1)
 for i in range(1, v + 1):
     parent[i] = i
 
-cycle = False
+cycle = False # 사이클 발생 여부
 
 for i in range(e):
     a, b = map(int, input().split())
+    # 사이클이 발생한 경우 종료
     if find_parent(parent, a) == find_parent(parent, b):
         cycle = True
         break
+    # 사이클이 발생하지 않았다면 합집합 수정
     else:
         union_parent(parent, a, b)
 

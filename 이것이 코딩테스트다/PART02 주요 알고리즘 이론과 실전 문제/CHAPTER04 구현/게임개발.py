@@ -1,7 +1,7 @@
 n, m = map(int, input().split())
 #방문한 위치 저장 리스트
 d = [[0]*m for _ in range(n)]
-x, y, direction = map(int, input().split())
+x, y, diretion = map(int, input().split())
 #현재 좌표 초기화
 d[x][y] = 1
 #맵 정보 입력

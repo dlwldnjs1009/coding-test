@@ -1,8 +1,6 @@
 #
 # 백준, 프로그래머스, LeetCode 문제 풀이 목록
 ## 📚 LeetCode
-| 문제번호 | 링크 |
-| ----- | ----- |
 |0062-unique-paths|[링크](./LeetCode/0062-unique-paths/0062-unique-paths.py)|
 |0200-number-of-islands|[링크](./LeetCode/0200-number-of-islands/README.md)|
 |0739-daily-temperatures|[링크](./LeetCode/0739-daily-temperatures/0739-daily-temperatures.py)|

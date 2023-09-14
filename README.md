@@ -30,6 +30,7 @@
 ### 🚀 Silver
 | 문제번호 | 링크 |
 | ----- | ----- |
+|1010. 다리 놓기|[링크](./%EB%B0%B1%EC%A4%80/Silver/1010.%E2%80%85%EB%8B%A4%EB%A6%AC%E2%80%85%EB%86%93%EA%B8%B0/README.md)|
 |1015. 수열 정렬|[링크](./%EB%B0%B1%EC%A4%80/Silver/1015.%E2%80%85%EC%88%98%EC%97%B4%E2%80%85%EC%A0%95%EB%A0%AC/README.md)|
 |10825. 국영수|[링크](./%EB%B0%B1%EC%A4%80/Silver/10825.%E2%80%85%EA%B5%AD%EC%98%81%EC%88%98/README.md)|
 |11399. ATM|[링크](./%EB%B0%B1%EC%A4%80/Silver/11399.%E2%80%85ATM/ATM.py)|

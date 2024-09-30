@@ -12,7 +12,11 @@ class Solution:
                 strs.append(char.lower())
 
          # 좌우를 비교하여 회문 판별
-        for i in range(len(strs) // 2):
-            if strs[i] != strs[len(strs) - 1 - i]:
+        # for i in range(len(strs) // 2):
+        #     if strs[i] != strs[len(strs) - 1 - i]:
+        #         return False
+        # return True
+        while len(strs) > 1:
+            if strs.pop(0) != strs.pop():
                 return False
         return True

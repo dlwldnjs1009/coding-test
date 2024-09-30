@@ -22,15 +22,22 @@ class Solution:
         #         return False
         # return True
 
-        strs: Deque = collections.deque()
+        # 데크 자료형 구현
+        # strs: Deque = collections.deque()
 
-        for char in s:
-            if char.isalnum():
-                strs.append(char.lower())
+        # for char in s:
+        #     if char.isalnum():
+        #         strs.append(char.lower())
         
-        while len(strs) > 1:
-            if strs.popleft() != strs.pop():
-                return False
+        # while len(strs) > 1:
+        #     if strs.popleft() != strs.pop():
+        #         return False
 
 
-        return True
+        # return True
+
+        # 슬라이싱 사용
+        s = s.lower()
+        # 정규식으로 불필요한 문자 필터링
+        s = re.sub('[^a-z0-9]', '', s)
+        return s == s[::-1]

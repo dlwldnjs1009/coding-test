@@ -1,24 +1,10 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        int start = 0;
-        int end = s.length() - 1;
-
-        // 중앙으로 이동하다 겹치면 종료
-        while (start < end) {
-            // 영숫자인지 판별하고 유효하지 않으면 한 칸씩 이동
-            if (!Character.isLetterOrDigit(s.charAt(start))) {
-                start++;
-            } else if (!Character.isLetterOrDigit(s.charAt(end))) {
-                end--;
-            } else {
-                // 유효하면 앞 글자와 뒷글자 모두 소문자로 변경 후 비교
-                if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))) {
-                    return false;
-                }
-                start++;
-                end--;
-            }
-        }
-        return true;
+        // 정규식으로 유효한 문자만 추출한 다음 모두 소문자로 변경
+        String s_filtered = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
+        // 문자열을 뒤집은 다음 String으로 변경
+        String s_reversed = new StringBuilder(s_filtered).reverse().toString();
+        // 두 문자열이 동일한지 비교
+        return s_filtered.equals(s_reversed);
     }
 }

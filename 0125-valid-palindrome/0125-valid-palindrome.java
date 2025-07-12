@@ -1,16 +1,23 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        StringBuilder sb = new StringBuilder();
-        // 1. 영숫자만 소문자로 추가
-        for (char c : s.toCharArray()) {
-            if (Character.isLetterOrDigit(c)) {
-                sb.append(Character.toLowerCase(c));
+        int start = 0;
+        int end = s.length() - 1;
+
+        // 중앙으로 이동하다 겹치면 종료
+        while (start < end) {
+            // 영숫자인지 판별하고 유효하지 않으면 한 칸씩 이동
+            if (!Character.isLetterOrDigit(s.charAt(start))) {
+                start++;
+            } else if (!Character.isLetterOrDigit(s.charAt(end))) {
+                end--;
+            } else {
+                // 유효하면 앞 글자와 뒷글자 모두 소문자로 변경 후 비교
+                if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))) {
+                    return false;
+                }
+                start++;
+                end--;
             }
-        }
-        // 2. 팰린드롬 체크
-        int left = 0, right = sb.length() - 1;
-        while (left < right) {
-            if (sb.charAt(left++) != sb.charAt(right--)) return false;
         }
         return true;
     }

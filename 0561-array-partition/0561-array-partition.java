@@ -1,15 +1,12 @@
 class Solution {
     public int arrayPairSum(int[] nums) {
         int sum = 0;
-        List<Integer> pair = new ArrayList<>();
         Arrays.sort(nums);
 
-        for (int n : nums) {
-            pair.add(n);
-
-            if (pair.size() == 2) {
-                sum += Collections.min(pair);
-                pair.clear();
+        // 앞에서부터 오름차순으로 인덱스 반복
+        for (int i = 0; i < nums.length; i++) {
+            if (i % 2 ==0) {
+                sum += nums[i];
             }
         }
         return sum;
